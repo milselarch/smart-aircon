@@ -29,6 +29,7 @@ Signal Out   ->  Digital Pin 2
 (If using a 3V Arduino, you may connect V+ to +3V)
 */
 
+#define RECVPIN D5
 #define LEDPIN D0
 //you may increase this value on Arduinos with greater than 2k SRAM
 #define maxLen 800
@@ -38,7 +39,7 @@ volatile unsigned int x = 0; //Pointer thru irBuffer - volatile because changed 
 
 void setup() {
   Serial.begin(115200); //change BAUD rate as required
-  attachInterrupt(D1, rxIR_Interrupt_Handler, CHANGE);//set up ISR for receiving IR signal
+  attachInterrupt(RECVPIN, rxIR_Interrupt_Handler, CHANGE);//set up ISR for receiving IR signal
 }
 
 void loop() {
@@ -52,17 +53,19 @@ void loop() {
     Serial.print("Raw: ("); //dump raw header format - for library
     Serial.print(x - 1);
     Serial.print(") ");
+    
     detachInterrupt(D1);//stop interrupts & capture until finshed here
     for (int i = 1; i < x; i++) { //now dump the times
       //if (!(i & 0x1)) Serial.print("-");
       Serial.print(irBuffer[i] - irBuffer[i - 1]);
       Serial.print(", ");
     }
+    
     x = 0;
     Serial.println();
     Serial.println();
     digitalWrite(LEDPIN, LOW);//end of visual indicator, for this time
-    attachInterrupt(D1, rxIR_Interrupt_Handler, CHANGE);//re-enable ISR for receiving IR signal
+    attachInterrupt(RECVPIN, rxIR_Interrupt_Handler, CHANGE); //re-enable ISR for receiving IR signal
   }
 
 }
