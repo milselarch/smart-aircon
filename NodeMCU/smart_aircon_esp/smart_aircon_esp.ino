@@ -4,7 +4,7 @@
 
 WiFiManager wifiManager;
 ESP8266WebServer server(80);
-HvacMitsubishi AirController((unsigned int) D5);
+HvacMitsubishi AirController((unsigned int) D1);
 boolean sendMessage = false;
 
 void handle_OnConnect () {
