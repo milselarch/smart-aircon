@@ -29,7 +29,7 @@ Signal Out   ->  Digital Pin 2
 (If using a 3V Arduino, you may connect V+ to +3V)
 */
 
-#define RECVPIN D2
+#define RECVPIN A0
 #define SENDPIN D5
 #define LEDPIN D0
 //you may increase this value on Arduinos with greater than 2k SRAM
@@ -50,28 +50,8 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   Serial.println("Press the button on the remote now - once only");
-
-    int timings[] = {19455, 831, 445, 394, 459, 380, 17551, 94, 472, 367, 444, 395, 457, 382, 17351, 286, 466, 1217, 457, 382, 17335, 294, 456, 383, 446, 394, 456, 383, 17311, 1154, 450, 389, 18169}
-    ;
-    int arrSize = sizeof(timings) / sizeof(*timings);
-    int value = HIGH;
-    Serial.println("PRE-SEND ");
-    for (int k = 0; k < arrSize; k++) {
-        digitalWrite(SENDPIN, value);
-        delayMicroseconds(timings[k]);
-    
-        Serial.print(timings[k]);
-        Serial.print(" ");
-        if (value == HIGH) { value = LOW; }
-        else { value = HIGH; }
-    }
-    
-    Serial.print("FINAL ");
-    Serial.println(value);
-    Serial.print("\n");
-    digitalWrite(SENDPIN, LOW);
-  
   delay(5000); // pause 5 secs
+  
   if (x) { //if a signal is captured
     digitalWrite(LEDPIN, HIGH);//visual indicator that signal received
     Serial.println();

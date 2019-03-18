@@ -31,7 +31,8 @@ void loop() {
     */
 
     while (true) {
-        val = analogRead(READPIN) * (25.0/3.3);
+        val = analogRead(READPIN);
+        // val = digitalRead(READPIN);
         Serial.println(val);
         
         // delay(0);
