@@ -25,6 +25,8 @@ class Extractor(object):
 
         return lowTimings
     
+    def leftPad(self, string, length=2, pad='0'):
+        return pad * (length - len(string)) + string
         
     def extractPulses(self, times, cutoff=600):
         startHigh = times[0]
@@ -42,9 +44,15 @@ class Extractor(object):
                 else:
                     pulses.append(0)
 
+        print(f"PULSES {pulses}")
         pulseStr = ''.join([{0: '0', 1: '1', -1: 'N'}[val] for val in pulses])
         chunks = pulseStr.split('N')
-        lengths = [len(chunk) for chunk in chunks]
-        zlengths = [(length - 1) // 2 for length in lengths]
-        splits = ''.join([hex(zlength)[2:] for zlength in zlengths])
-        return startHigh, startLow, splits, len(times)
+        print(f"CHUNKS {chunks}")
+        print(f"RAWLEN {[len(chunk) for chunk in chunks]}")
+        lengths = [chunk.count('0') for chunk in chunks]
+        print(f"LENGTHS {lengths}")
+        splits = [self.leftPad(hex(length)[2:]) for length in lengths]
+        print(f"SPLITS {splits}")
+        sequence = ''.join(splits)
+        #splits = ''.join([str(zlength) for zlength in zlengths])
+        return startHigh, startLow, sequence, len(times)
