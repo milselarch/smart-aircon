@@ -1,22 +1,41 @@
-#include <ESP8266WebServer.h>
 #include <AutoConnect.h>
+#include <ArduinoJson.h>
+#include <ESP8266WebServer.h>
 #include "sender.h"
 
 ESP8266WebServer WebServer;
-AutoConnect Portal(WebServer)
+AutoConnect Portal(WebServer);
 PulseSender sender(D1);
+AirconState aircon();
+
+unsigned int temp;
+int state = OFF_STATE;
 
 void homePage() {
-    WebServer.send(200, "text/plain", "Hello WOrld Owo");
+    WebServer.send(200, "text/plain", "Hello Wrld Owo");
+}
+
+void statusPage() {
+    DynamicJsonDocument doc(512);
+    JsonObject root = jsonBuffer.createObject();
+    root["state"] = state;
+    root["temp"] = temp;
+
+    String output;
+    root.printTo(output);
+    WebServer.send(200, "application/json", output);
 }
 
 void setup() {
     // put your setup code here, to run once:
     Serial.begin(115200);
+    delay(50);
+
     Serial.println("TESTING1");
     Serial.println("TESTING2");
 
-    Server.on("/", homePage);
+    WebServer.on("/", homePage);
+    WebServer.on("/status", statusPage);
     Portal.begin();
 }
 
