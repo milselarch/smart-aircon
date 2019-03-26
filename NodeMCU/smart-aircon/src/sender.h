@@ -23,29 +23,29 @@ void spaceDuration(int sendPin, float duration) {
     delayMicroseconds(duration);
 };
 
-void sendSignals (int sendPin, int signals[], int len) {
-    const int START_HIGH = 3605;
-    const int START_LOW = 1523;
-    const int LONG_LOW = 1223 /*1223 /*1101*/;
-    const int LOW_VAL = 430 /*430 /*285*/;
-    const int HIGH_VAL = 553 /*420 /*553*/;
+const int START_HIGH = 3605;
+const int START_LOW = 1523;
+const int LONG_LOW = 1223 /*1223 /*1101*/;
+const int LOW_VAL = 430 /*430 /*285*/;
+const int HIGH_VAL = 553 /*420 /*553*/;
+unsigned int SIGNAL_VAL;
 
+void sendSignals (int sendPin, int signals[], int len) {
     pulseDuration(sendPin, START_HIGH);
     spaceDuration(sendPin, START_LOW);
     
     for (int k = 0; k < len; k++) {
-        const int val = signals[k];
+        SIGNAL_VAL = signals[k];
 
-        if (val == 1) {
+        if (SIGNAL_VAL == 1) {
             pulseDuration(sendPin, HIGH_VAL);
-        } else if (val == 0) {
+        } else if (SIGNAL_VAL == 0) {
             spaceDuration(sendPin, LOW_VAL);
         } else {
             spaceDuration(sendPin, LONG_LOW);
         }
     }
 }
-
 
 class PulseSender {
     int signals[MAX_LEN];
@@ -114,12 +114,14 @@ class PulseSender {
             // send code to off aircon
             this->sendSequence("000003020001020001000202140100000e0125010000000100");
             return true;
-        }
+        };
         
+        unsigned int temp, fanSpeed;
+        String command;
         for (int k = 0; k < this->commands; k++) {
-            int temp = this->temps[k];
-            int fanSpeed = this->fanSpeeds[k];
-            String command = String(this->codes[k]);
+            temp = this->temps[k];
+            fanSpeed = this->fanSpeeds[k];
+            command = String(this->codes[k]);
 
             if (temp == targetTemp and fanSpeed == targetFanSpeed) {
                 this->sendSequence(command);
@@ -169,21 +171,21 @@ class PulseSender {
             //Serial.print(currentChar);
             //Serial.println(nextChar);
             //Serial.println(String(zeroLength));
-            Serial.print("1,");
+            // Serial.print("1,");
             this->signals[index] = 1;
             index++;
             
             for (int i = 0; i < zeroLength; i++) {
-                Serial.print("0,");
+                // Serial.print("0,");
                 this->signals[index] = 0;
                 index++;
-                Serial.print("1,");
+                // Serial.print("1,");
                 this->signals[index] = 1;
                 index++;
             }
 
             if (k < sequence.length() - 3) {
-                Serial.print("-1,");
+                // Serial.print("-1,");
                 this->signals[index] = -1;
                 index++;
             };
@@ -191,8 +193,8 @@ class PulseSender {
             //Serial.println(index - startIndex);
         }
 
-        Serial.println("");
-        Serial.println(String(index));
+        // Serial.println("");
+        // Serial.println(String(index));
         sendSignals(this->sendPin, this->signals, index);
     };
 }

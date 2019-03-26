@@ -15,6 +15,10 @@ class ClapDetector {
         pinMode(sensorPin, INPUT);
     }
 
+    unsigned int getSoundValue() {
+        return this->soundValue;
+    }
+
     void update() {
         this->soundValue = analogRead(this->sensorPin);
         this->currentNoiseTime = millis();
@@ -48,4 +52,4 @@ class ClapDetector {
     void resetClapDetection() {
         this->clapDetected = false;
     }
-}
+};

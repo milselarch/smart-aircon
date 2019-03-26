@@ -13,16 +13,25 @@ class AirconState {
     PulseSender *sender;
     OneWire *onewire;
 
+    const unsigned int DETECT_DELAY = 10 * 1000;
+    const unsigned int TEMP_DELAY = 240 * 1000;
+
     unsigned int pirPin;
     unsigned int targetTemp = 25;
     unsigned int targetFanspeed = 1;
+    unsigned int lastTempUpdate = -1;
     float maxBackgroundTemp = 28;
 
     float temp = -1;
     bool currentlyOn = false;
-    bool peopleDetected = false;
+    bool initialPulsed = false;
+    unsigned long lastPeopleDetected = -1;
     bool needsFlush = true;
     int state = ON_STATE;
+
+    bool pastShouldBeOn;
+    bool detected;
+    bool onState;
 
     public:
     AirconState (
@@ -45,80 +54,90 @@ class AirconState {
     int getTargetTemp() { return this->targetTemp; }
     int getFanspeed() { return this->targetFanspeed; }
     float getMaxBackgroundTemp() { return this->maxBackgroundTemp; }
-    bool getPeopleDetected() { return this->peopleDetected; }
     int getState() { return this->state; };
+    unsigned long detectDelay() { return millis() - this->lastPeopleDetected; }
+    bool getPeopleDetected() { 
+        return this->detectDelay() < this->DETECT_DELAY;
+    }
 
     bool shouldBeOn() {
         return (
             (this->state == ON_STATE) || (
                 (this->state == AUTO_STATE) &&
                 (this->temp >= this->maxBackgroundTemp) &&
-                this->peopleDetected
+                this->getPeopleDetected()
             )
         );
     }
 
     float updateTemp() {
         this->sensors->requestTemperatures();
-        delay(10);
         this->temp = this->sensors->getTempCByIndex(0);
         return this->temp;
     };
 
     bool updatePIR() {
-        this->peopleDetected = digitalRead(this->pirPin);
+        detected = digitalRead(this->pirPin);
+        if (detected) {
+            this->lastPeopleDetected = millis();
+        };
+        
+        return detected;
     }
 
     bool setFanspeed (unsigned int fanspeed) {
-        bool pastShouldBeOn = this->shouldBeOn();
+        pastShouldBeOn = this->shouldBeOn();
         this->targetFanspeed = fanspeed;
-
-        bool needsFlush = (this->shouldBeOn() != pastShouldBeOn);
-        if (needsFlush) { this->needsFlush = true; }
-        return needsFlush;
-    }
-
-    bool setPeopleDetected(bool peopleDetected) {
-        bool pastShouldBeOn = this->shouldBeOn();
-        this->peopleDetected = peopleDetected;
-        bool needsFlush = (this->shouldBeOn() != pastShouldBeOn);
-        if (needsFlush) { this->needsFlush = true; }
+        if (this->shouldBeOn() != pastShouldBeOn) {
+            this->needsFlush = true;
+        }
         return needsFlush;
     }
 
     bool setTemp(unsigned int temp) {
-        bool pastShouldBeOn = this->shouldBeOn();
+        pastShouldBeOn = this->shouldBeOn();
         this->targetTemp = temp;
-
-        bool needsFlush = (this->shouldBeOn() != pastShouldBeOn);
-        if (needsFlush) { this->needsFlush = true; }
+        if (this->shouldBeOn() != pastShouldBeOn) {
+            this->needsFlush = true;
+        }
         return needsFlush;
     }
 
     bool setMaxTemp(float maxTemp) {
-        bool pastShouldBeOn = this->shouldBeOn();
+        pastShouldBeOn = this->shouldBeOn();
         this->maxBackgroundTemp = temp;
-
-        bool needsFlush = (this->shouldBeOn() != pastShouldBeOn);
-        if (needsFlush) { this->needsFlush = true; }
+        if (this->shouldBeOn() != pastShouldBeOn) {
+            this->needsFlush = true;
+        }
         return needsFlush;
     }
 
     bool setState(int state) {
-        bool pastShouldBeOn = this->shouldBeOn();
+        pastShouldBeOn = this->shouldBeOn();
         this->state = state;
+        if (this->shouldBeOn() != pastShouldBeOn) {
+            this->needsFlush = true;
+        }
 
-        bool needsFlush = (this->shouldBeOn() != pastShouldBeOn);
-        if (needsFlush) { this->needsFlush = true; }
         return needsFlush;
     } 
 
-    int update() {
+    int update(rgbLed & RGB) {
         this->updatePIR();
-        this->updateTemp();
-        bool onState = this->shouldBeOn();
+        if (millis() - this->lastTempUpdate > this->TEMP_DELAY) {
+            Serial.println("RGB ALL ON");
+            RGB.write(50);
+            this->lastTempUpdate = millis();
+            this->updateTemp();
+            RGB.write();
+            Serial.println("RGB ALL OFF");
+        }
 
+        onState = this->shouldBeOn();
         if (this->needsFlush) {
+            this->needsFlush = false;
+            this->currentlyOn = onState;
+            this->initialPulsed = true;
             this->sender->sendCommand(
                 onState, this->targetTemp, this->targetFanspeed
             );

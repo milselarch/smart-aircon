@@ -2,174 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2c5cc8e-a0af-4214-bc23-7bb6d7458ba7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/post-test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ardunio Uno/hvac-ir-control/HVAC_LIB_ESP8266.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Ardunio Uno/hvac-ir-control/HVAC_LIB_ESP8266.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ardunio Uno/hvac-ir-control/hvac-ir-control.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../Ardunio Uno/hvac-ir-control/hvac-ir-control.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IR-analysis/cam-preview.py" beforeDir="false" afterPath="$PROJECT_DIR$/../IR-analysis/cam-preview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IR-analysis/drift.py" beforeDir="false" afterPath="$PROJECT_DIR$/../IR-analysis/drift.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IR-analysis/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/../IR-analysis/extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IR-analysis/ir-scan.py" beforeDir="false" afterPath="$PROJECT_DIR$/../IR-analysis/ir-scan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IR-analysis/output.py" beforeDir="false" afterPath="$PROJECT_DIR$/../IR-analysis/output.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IR-analysis/piCapture.py" beforeDir="false" afterPath="$PROJECT_DIR$/../IR-analysis/piCapture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IR-analysis/sendTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/../IR-analysis/sendTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/IR-read-2/IR-read-2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/IR-read-2/IR-read-2.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/IR-read/IR-read.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/IR-read/IR-read.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/IR-send/IR-send.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/IR-send/IR-send.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/IRDecoder/IRDecoder.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/IRDecoder/IRDecoder.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/TurnOnMitsubishiAC/TurnOnMitsubishiAC.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/TurnOnMitsubishiAC/TurnOnMitsubishiAC.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/analogue-IR-record/analogue-IR-record.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/analogue-IR-record/analogue-IR-record.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/copy-send/copy-send.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/copy-send/copy-send.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/infared_aircon_read/infared_aircon_read.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/infared_aircon_read/infared_aircon_read.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/lib-sender/lib-sender.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/lib-sender/lib-sender.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/mitsuAcTest/mitsuAcTest.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/mitsuAcTest/mitsuAcTest.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/request-test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/request-test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/include/README" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/include/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/lib/README" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/lib/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/smart-aircon.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/ClapDetector.h" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/ClapDetector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/RGBLed.h" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/RGBLed.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/melody.h" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/melody.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/sender.h" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/sender.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/smart-aircon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/smart-aircon.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/state.h" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/src/state.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart-aircon/test/README" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart-aircon/test/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart_aircon_esp/HVAC_LIB_ESP8266.h" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart_aircon_esp/HVAC_LIB_ESP8266.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart_aircon_esp/smart_aircon_esp.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart_aircon_esp/smart_aircon_esp.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeMCU/smart_aircon_replay/smart_aircon_replay.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../NodeMCU/smart_aircon_replay/smart_aircon_replay.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/app.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/app.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/drawable-nodpi/splash_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/drawable-nodpi/splash_screen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values-v21/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values-v21/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values-v21/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values-v21/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values-v21/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values-v21/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/Android/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/LaunchScreen.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/LaunchScreen.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/build.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/App_Resources/iOS/build.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/components/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aircon-app/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../aircon-app/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/hooks/after-prepare/nativescript-dev-webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/hooks/after-prepare/nativescript-dev-webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/hooks/after-watch/nativescript-dev-webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/hooks/after-watch/nativescript-dev-webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/hooks/before-cleanApp/nativescript-dev-webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/hooks/before-cleanApp/nativescript-dev-webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/hooks/before-prepareJSApp/nativescript-dev-webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/hooks/before-prepareJSApp/nativescript-dev-webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/hooks/before-preview-sync/nativescript-dev-webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/hooks/before-preview-sync/nativescript-dev-webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/hooks/before-shouldPrepare/nativescript-dev-webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/hooks/before-shouldPrepare/nativescript-dev-webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/hooks/before-watch/nativescript-dev-webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/hooks/before-watch/nativescript-dev-webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/hooks/before-watchPatterns/nativescript-dev-webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/hooks/before-watchPatterns/nativescript-dev-webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/core/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/core/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/livedata/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/livedata/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/livedata/core/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/livedata/core/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/viewmodel/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/arch/lifecycle/viewmodel/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/asynclayoutinflater/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/asynclayoutinflater/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/compat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/compat/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coordinatorlayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coordinatorlayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coreui/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coreui/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coreutils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/coreutils/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/cursoradapter/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/cursoradapter/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/customview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/customview/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/design/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/design/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/documentfile/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/documentfile/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/drawerlayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/drawerlayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/fragment/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/fragment/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/graphics/drawable/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/graphics/drawable/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/interpolator/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/interpolator/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/loader/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/loader/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/localbroadcastmanager/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/localbroadcastmanager/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/mediacompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/mediacompat/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/multidex/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/multidex/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/print/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/print/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/slidingpanelayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/slidingpanelayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/swiperefreshlayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/swiperefreshlayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/transition/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/transition/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v4/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v4/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/appcompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/appcompat/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/cardview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/cardview/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/recyclerview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/recyclerview/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/viewpager/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/viewpager/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/androidx/versionedparcelable/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/androidx/versionedparcelable/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tns/android_runtime/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tns/android_runtime/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/org/nativescript/nativescript_socket/io/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/org/nativescript/nativescript_socket/io/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/org/nativescript/widgets/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/org/nativescript/widgets/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/app/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/app/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/assets/app/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/assets/app/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/FragmentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/FragmentClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/NativeScriptActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/NativeScriptActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/animation/Animator_AnimatorListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/animation/Animator_AnimatorListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/animation/ValueAnimator_AnimatorUpdateListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/animation/ValueAnimator_AnimatorUpdateListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/app/Application_ActivityLifecycleCallbacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/app/Application_ActivityLifecycleCallbacks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/app/Dialog_vendor_57418_26_DialogImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/app/Dialog_vendor_57418_26_DialogImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/content/BroadcastReceiver_vendor_37695_26_BroadcastReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/content/BroadcastReceiver_vendor_37695_26_BroadcastReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/content/ComponentCallbacks2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/content/ComponentCallbacks2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/content/DialogInterface_OnClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/content/DialogInterface_OnClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/content/DialogInterface_OnDismissListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/content/DialogInterface_OnDismissListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/support/v4/app/DialogFragment_vendor_57452_26_DialogFragmentImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/support/v4/app/DialogFragment_vendor_57452_26_DialogFragmentImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/support/v4/view/PagerAdapter_vendor_74905_26_FragmentPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/support/v4/view/PagerAdapter_vendor_74905_26_FragmentPagerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/GestureDetector_SimpleOnGestureListener_vendor_63398_26_TapAndDoubleTapGestureListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/GestureDetector_SimpleOnGestureListener_vendor_63398_26_TapAndDoubleTapGestureListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/GestureDetector_SimpleOnGestureListener_vendor_63504_26_SwipeGestureListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/GestureDetector_SimpleOnGestureListener_vendor_63504_26_SwipeGestureListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/ScaleGestureDetector_SimpleOnScaleGestureListener_vendor_63455_26_PinchGestureListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/ScaleGestureDetector_SimpleOnScaleGestureListener_vendor_63455_26_PinchGestureListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/ViewTreeObserver_OnGlobalLayoutListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/ViewTreeObserver_OnGlobalLayoutListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/ViewTreeObserver_OnScrollChangedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/ViewTreeObserver_OnScrollChangedListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/View_OnClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/View_OnClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/View_OnLayoutChangeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/view/View_OnLayoutChangeListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/webkit/WebViewClient_vendor_77494_26_WebViewClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/webkit/WebViewClient_vendor_77494_26_WebViewClientImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/widget/BaseAdapter_vendor_67533_26_ListViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/widget/BaseAdapter_vendor_67533_26_ListViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/widget/TabHost_vendor_69563_26_TabHostImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/android/widget/TabHost_vendor_69563_26_TabHostImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_49774_26_MenuItemClickListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_49774_26_MenuItemClickListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_52805_26_ClickListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_52805_26_ClickListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_57384_26_TouchListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_57384_26_TouchListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_58743_26_DateChangedListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_58743_26_DateChangedListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_59581_26_EditTextListenersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_59581_26_EditTextListenersImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_60686_28_TransitionListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_60686_28_TransitionListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_60747_28_AnimationListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_60747_28_AnimationListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_62015_28_AttachListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_62015_28_AttachListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_64415_26_ImageLoadedListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_64415_26_ImageLoadedListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_66840_26_FormatterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_66840_26_FormatterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_66858_26_ValueChangeListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_66858_26_ValueChangeListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_67309_26_ItemClickListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_67309_26_ItemClickListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69013_26_CompatQueryTextListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69013_26_CompatQueryTextListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69051_26_CompatCloseListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69051_26_CompatCloseListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69519_26_TabChangeListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69519_26_TabChangeListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69541_26_TabContentFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69541_26_TabContentFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69881_28_SeekBarChangeListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_69881_28_SeekBarChangeListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_74331_26_CheckedChangeListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_74331_26_CheckedChangeListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_75936_26_TextTransformationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_75936_26_TextTransformationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_76859_26_TimeChangedListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Object_vendor_76859_26_TimeChangedListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Runnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/java/lang/Runnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/org/nativescript/widgets/Async_CompleteCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/org/nativescript/widgets/Async_CompleteCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/org/nativescript/widgets/FragmentBase_vendor_74864_26_TabFragmentImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/app/src/main/java/com/tns/gen/org/nativescript/widgets/FragmentBase_vendor_74864_26_TabFragmentImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/build-tools/mdg-java-dependencies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/build-tools/mdg-java-dependencies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/build-tools/mdg-output-dir.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/build-tools/mdg-output-dir.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-bindings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-bindings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-input-file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-input-file.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-interfaces-names.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-interfaces-names.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-java-dependencies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-java-dependencies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-output-file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/android/build-tools/sbg-output-file.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/generated/not_namespaced_r_class_sources/release/generateReleaseRFile/out/org/nativescript/nativescript_socket/io/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/generated/not_namespaced_r_class_sources/release/generateReleaseRFile/out/org/nativescript/nativescript_socket/io/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/intermediates/aapt_friendly_merged_manifests/release/processReleaseManifest/aapt/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/intermediates/aapt_friendly_merged_manifests/release/processReleaseManifest/aapt/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/platforms/tempPlugin/nativescript_socket.io/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-test.py" beforeDir="false" afterPath="$PROJECT_DIR$/post-test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,17 +19,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/post-test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -210,8 +53,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="65" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="456" />
     <option name="y" value="-4" />
     <option name="width" value="1855" />
     <option name="height" value="1084" />
@@ -283,25 +126,20 @@
       <option name="presentableId" value="Default" />
       <updated>1553353937835</updated>
       <workItem from="1553353939200" duration="3256000" />
+      <workItem from="1553423003248" duration="8364000" />
+      <workItem from="1553600039196" duration="6172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3256000" />
+    <option name="totallyTimeSpent" value="17792000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="7" />
-    <editor active="true" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2498618" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25538972" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.276907" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -309,11 +147,17 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="SciView" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.276907" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,12 +167,12 @@
     <entry file="file://$PROJECT_DIR$/post-test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

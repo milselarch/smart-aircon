@@ -99,8 +99,6 @@
 #define NOTE_D8  4699
 #define NOTE_DS8 4978
 
-#define melodyPin D1
-
 #include <Arduino.h>
 
 unsigned int melody[] = {
@@ -121,6 +119,8 @@ unsigned int tempo[] = {
 class MelodyPlayer {
   //Bitch lasagna + crab song main theme melody
   unsigned int buzzPin;
+  unsigned int size;
+  unsigned int note;
   int pauseBetweenNotes;
   int noteDuration;
 
@@ -130,13 +130,13 @@ class MelodyPlayer {
   }
 
   void play() {
-    unsigned int size = sizeof(melody) / sizeof(int);
-    for (int thisNote = 0; thisNote < size; thisNote++) {
+    this->size = sizeof(melody) / sizeof(int);
+    for (this->note = 0; this->note < this->size; this->note++) {
       // to calculate the note duration, take one second
       // divided by the note type.
       //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
-      this->noteDuration = 1000 / tempo[thisNote];
-      buzz(this->buzzPin, melody[thisNote], this->noteDuration);
+      this->noteDuration = 1000 / tempo[this->note];
+      this->buzz(this->buzzPin, melody[this->note], this->noteDuration);
       this->pauseBetweenNotes = this->noteDuration * 1.30;
       delay(this->pauseBetweenNotes);
       yield();
@@ -149,9 +149,10 @@ class MelodyPlayer {
       pinMode (_pin, OUTPUT );
       digitalWrite(LED_BUILTIN, HIGH);
       analogWriteFreq(frequency);
-      analogWrite(_pin,500);
+      analogWrite(_pin, 500);
       delay(duration);
-      analogWrite(_pin,0);
+      analogWrite(_pin, 0);
       digitalWrite(LED_BUILTIN, LOW);
+      yield();
   }
-}
+};
