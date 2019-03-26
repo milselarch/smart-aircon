@@ -67,9 +67,9 @@ void setStatusPage() {
         } else if (argName == "state") {
             int state = argValue.toInt();
             aircon.setState(state);
+        } else if (argName == "force") {
+            aircon.forceSend();
         }
-        
-        yield();
     }
 
     yield();
@@ -125,12 +125,13 @@ int updateStatus;
 
 void loop() {
     server.handleClient();
-    for (int k = 0; k < 100; k++) {
-        yield();
-    }
+    red = 0;
+    green = 0;
+    blue = 0;
 
-    clapDetector.update();    
+    //clapDetector.update();    
     //Serial.println(clapDetector.getSoundValue());
+    /*
     if (clapDetector.isClapDetected()) {
         clapDetector.resetClapDetection();
         
@@ -146,38 +147,36 @@ void loop() {
         }
 
         blue = aircon.getPeopleDetected() ? 50: 0;
-        switch (aircon.getState()) {
-            case ON_STATE:
-                red = 0;
-                green = 50;
-                break;
-            case OFF_STATE:
-                red = 50;
-                green = 0;
-                break;
-            case AUTO_STATE:
-                red = 50;
-                green = 50;
-                break;
-            default:
-                Serial.println("STATE UNKNOWN");
-        }
-
-        RGBLed.write(red, green, blue, true);
     }
+    */
 
-    red = 0;
-    green = 0;
-    blue = 0;
-
-    updateStatus = aircon.update(RGBLed);
+    updateStatus = aircon.update(RGBLed, false);
     if (updateStatus != -1) {
         // Serial.println("NEEDS UPDATE");
         if (updateStatus == 1) {
             player.play();
         }
     }
+    
+    switch (aircon.getState()) {
+        case ON_STATE:
+            red = 0;
+            green = 50;
+            break;
+        case OFF_STATE:
+            red = 50;
+            green = 0;
+            break;
+        case AUTO_STATE:
+            red = 50;
+            green = 50;
+            break;
+        default:
+            Serial.println("STATE UNKNOWN");
+    }
 
+    RGBLed.write(red, green, blue, true);
+    delay(100);
     // Serial.print("DETECT-DELAY");
     // Serial.println(aircon.detectDelay());
 }

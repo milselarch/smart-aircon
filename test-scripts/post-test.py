@@ -1,4 +1,4 @@
-url = 'http://192.168.1.89/status'
+url = 'http://192.168.1.89/set-status'
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -12,7 +12,7 @@ session = requests.Session()
 session.mount(url, github_adapter)
 
 try:
-    resp = requests.get(url=url, params={})
+    resp = requests.get(url=url, params=dict(state=2, maxTemp=28))
     data = resp.content
     print(f"DATA {data}")
     # Check the JSON Response Content documentation below

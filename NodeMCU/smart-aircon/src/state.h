@@ -14,7 +14,7 @@ class AirconState {
     OneWire *onewire;
 
     const unsigned int DETECT_DELAY = 10 * 1000;
-    const unsigned int TEMP_DELAY = 240 * 1000;
+    const unsigned int TEMP_DELAY = 60 * 1000;
 
     unsigned int pirPin;
     unsigned int targetTemp = 25;
@@ -61,18 +61,27 @@ class AirconState {
     }
 
     bool shouldBeOn() {
+        return this->shouldBeOn(false);
+    }
+
+    bool shouldBeOn(bool detectPeople) {
         return (
             (this->state == ON_STATE) || (
                 (this->state == AUTO_STATE) &&
                 (this->temp >= this->maxBackgroundTemp) &&
-                this->getPeopleDetected()
+                (!detectPeople || this->getPeopleDetected())
             )
         );
     }
 
     float updateTemp() {
+        pastShouldBeOn = this->shouldBeOn();
         this->sensors->requestTemperatures();
         this->temp = this->sensors->getTempCByIndex(0);
+        if (this->shouldBeOn() != pastShouldBeOn) {
+            this->needsFlush = true;
+        }
+
         return this->temp;
     };
 
@@ -100,16 +109,35 @@ class AirconState {
         if (this->shouldBeOn() != pastShouldBeOn) {
             this->needsFlush = true;
         }
-        return needsFlush;
+        return this->needsFlush;
     }
 
     bool setMaxTemp(float maxTemp) {
-        pastShouldBeOn = this->shouldBeOn();
-        this->maxBackgroundTemp = temp;
-        if (this->shouldBeOn() != pastShouldBeOn) {
+        Serial.print("MAX-TEMP ");
+        Serial.print(maxTemp);
+        Serial.print(" ");
+        Serial.println(this->temp);
+
+        this->pastShouldBeOn = this->shouldBeOn();
+        this->maxBackgroundTemp = maxTemp;
+        if (this->shouldBeOn() != this->pastShouldBeOn) {
+            Serial.println("NEED MAX FLUSH");
             this->needsFlush = true;
+        } else {
+            Serial.println("NO NEED MAX FLUSH");
         }
-        return needsFlush;
+
+        Serial.println(this->state == ON_STATE);
+        Serial.println(this->state == AUTO_STATE);
+        Serial.println(this->temp >= this->maxBackgroundTemp);
+
+        if (this->shouldBeOn()) {
+            Serial.println("SHOULD BE ON");
+        } else {
+            Serial.println("SHOULD BE OFF");
+        }
+
+        return this->needsFlush;
     }
 
     bool setState(int state) {
@@ -119,12 +147,22 @@ class AirconState {
             this->needsFlush = true;
         }
 
-        return needsFlush;
-    } 
+        return this->needsFlush;
+    }
 
     int update(rgbLed & RGB) {
-        this->updatePIR();
-        if (millis() - this->lastTempUpdate > this->TEMP_DELAY) {
+        return this->update(RGB, true);
+    }
+
+    int update(rgbLed & RGB, bool updatePIR) {
+        if (updatePIR == true) {
+            this->updatePIR();
+        }
+
+        if (
+            (millis() - this->lastTempUpdate > this->TEMP_DELAY) ||
+            (this->lastTempUpdate == -1)
+        ) {
             Serial.println("RGB ALL ON");
             RGB.write(50);
             this->lastTempUpdate = millis();
@@ -133,11 +171,14 @@ class AirconState {
             Serial.println("RGB ALL OFF");
         }
 
+        // if updatePIR is true, detect people should be true
         onState = this->shouldBeOn();
         if (this->needsFlush) {
             this->needsFlush = false;
             this->currentlyOn = onState;
             this->initialPulsed = true;
+            Serial.print("SEND ");
+            Serial.print(onState);
             this->sender->sendCommand(
                 onState, this->targetTemp, this->targetFanspeed
             );
@@ -147,4 +188,9 @@ class AirconState {
             return -1;
         }
     }
+
+    void forceSend() {
+        this->needsFlush = true;
+    }
 }
+;
