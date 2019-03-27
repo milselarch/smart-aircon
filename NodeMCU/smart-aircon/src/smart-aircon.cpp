@@ -176,6 +176,8 @@ void loop() {
     }
 
     RGBLed.write(red, green, blue, true);
+    pinMode(D4, OUTPUT);
+    digitalWrite(D4, HIGH);
     delay(100);
     // Serial.print("DETECT-DELAY");
     // Serial.println(aircon.detectDelay());

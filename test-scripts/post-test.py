@@ -12,7 +12,7 @@ session = requests.Session()
 session.mount(url, github_adapter)
 
 try:
-    resp = requests.get(url=url, params=dict(state=2, maxTemp=28))
+    resp = requests.get(url=url, params=dict(state=2, temp=25, maxTemp=28))
     data = resp.content
     print(f"DATA {data}")
     # Check the JSON Response Content documentation below

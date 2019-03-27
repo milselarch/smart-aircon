@@ -77,6 +77,7 @@ class AirconState {
     float updateTemp() {
         pastShouldBeOn = this->shouldBeOn();
         this->sensors->requestTemperatures();
+        delay(10);
         this->temp = this->sensors->getTempCByIndex(0);
         if (this->shouldBeOn() != pastShouldBeOn) {
             this->needsFlush = true;
@@ -95,18 +96,16 @@ class AirconState {
     }
 
     bool setFanspeed (unsigned int fanspeed) {
-        pastShouldBeOn = this->shouldBeOn();
         this->targetFanspeed = fanspeed;
-        if (this->shouldBeOn() != pastShouldBeOn) {
+        if (this->shouldBeOn() || this->currentlyOn) {
             this->needsFlush = true;
         }
         return needsFlush;
     }
 
     bool setTemp(unsigned int temp) {
-        pastShouldBeOn = this->shouldBeOn();
         this->targetTemp = temp;
-        if (this->shouldBeOn() != pastShouldBeOn) {
+        if (this->shouldBeOn() || this->currentlyOn) {
             this->needsFlush = true;
         }
         return this->needsFlush;
@@ -177,13 +176,20 @@ class AirconState {
             this->needsFlush = false;
             this->currentlyOn = onState;
             this->initialPulsed = true;
-            Serial.print("SEND ");
-            Serial.print(onState);
             this->sender->sendCommand(
                 onState, this->targetTemp, this->targetFanspeed
             );
 
             return onState;
+
+        } else if (this->currentlyOn != onState) {
+            this->currentlyOn != onState;
+            this->sender->sendCommand(
+                onState, this->targetTemp, this->targetFanspeed
+            );
+
+            return onState;
+            
         } else {
             return -1;
         }
