@@ -15,7 +15,7 @@ ClapDetector clapDetector(MICROPHONE_PIN);
 AirconState aircon(D1, D2, D6);
 rgbLed RGBLed(D5, D7, D0);
 MelodyPlayer player(D8);
-DynamicJsonDocument doc(128);
+DynamicJsonDocument doc(256);
 JsonObject root = doc.to<JsonObject>();
 
 void homePage() {
@@ -45,37 +45,54 @@ void statusPage() {
 }
 
 void setStatusPage() {
-    yield();
     int args = server.args();
-    yield();
     Serial.print("ARGS ");
     Serial.println(args);
+
+    unsigned int temp = aircon.getTemp();
+    unsigned int fanspeed = aircon.getFanspeed();
+    float maxTemp = aircon.getMaxBackgroundTemp();
+    unsigned int state = aircon.getState();
+    bool force = false;
 
     for (int k = 0; k < args; k++) {
         const String argName = server.argName(k);
         const String argValue = server.arg(argName);
-        
-        if (argName == "temp") {
-            unsigned int temp = argValue.toInt();
-            aircon.setTemp(temp);
+        Serial.print("ARG ");
+        Serial.print(argName);
+        Serial.print(" - ");
+        Serial.println(argValue);
+
+        if (argName == "plain") {
+            // accomodating JSON-formatted axios requests
+            deserializeJson(doc, argValue);
+            temp = doc["temp"];
+            fanspeed = doc["fanspeed"];
+            maxTemp = doc["maxTemp"];
+            state = doc["state"];
+            force = doc["force"];
+        } else if (argName == "temp") {
+            temp = argValue.toInt();
         } else if (argName == "fanspeed") {
-            unsigned int fanspeed = argValue.toInt();
-            aircon.setFanspeed(fanspeed);
+            fanspeed = argValue.toInt();
         } else if (argName == "maxTemp") {
-            float maxTemp = argValue.toFloat();
-            aircon.setMaxTemp(maxTemp);
+            maxTemp = argValue.toFloat();
         } else if (argName == "state") {
-            int state = argValue.toInt();
-            aircon.setState(state);
+            state = argValue.toInt();
         } else if (argName == "force") {
-            aircon.forceSend();
+            force = true;
         }
     }
-
-    yield();
+    
+    aircon.setTemp(temp);
+    aircon.setFanspeed(fanspeed);
+    aircon.setMaxTemp(maxTemp);
+    aircon.setState(state);
+    
+    if (force == true) { aircon.forceSend(); }
     server.send(200, "application/json", "{status: 'ok'}");
-    yield();
 }
+
 
 void configModeCallback (WiFiManager *myWiFiManager) {
     Serial.println("Entered config mode");

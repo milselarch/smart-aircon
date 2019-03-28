@@ -4,5 +4,9 @@
   },
   "main": "main",
   "name": "smart_aircon",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "nativescript": {},
+  "scripts": {
+    "cleanse": "rm -rf platforms"
+  }
 }
