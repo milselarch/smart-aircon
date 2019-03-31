@@ -163,7 +163,7 @@ class AirconState {
             (this->lastTempUpdate == -1)
         ) {
             Serial.println("RGB ALL ON");
-            RGB.write(50);
+            RGB.write(HIGH);
             this->lastTempUpdate = millis();
             this->updateTemp();
             RGB.write();

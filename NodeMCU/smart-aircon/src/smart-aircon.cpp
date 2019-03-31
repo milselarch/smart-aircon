@@ -13,7 +13,7 @@
 ESP8266WebServer server(80);
 ClapDetector clapDetector(MICROPHONE_PIN);
 AirconState aircon(D1, D2, D6);
-rgbLed RGBLed(D5, D7, D0);
+rgbLed RGBLed(D0, D7, D5);
 MelodyPlayer player(D8);
 DynamicJsonDocument doc(256);
 JsonObject root = doc.to<JsonObject>();
@@ -106,6 +106,8 @@ void saveConfigCallback () {
 }
 
 void setup() {
+    pinMode(D4, OUTPUT);
+    digitalWrite(D4, HIGH);
     RGBLed.write(255, 0, 0, true);
     Serial.begin(115200);
     delay(50);
@@ -142,9 +144,9 @@ int updateStatus;
 
 void loop() {
     server.handleClient();
-    red = 0;
-    green = 0;
-    blue = 0;
+    red = LOW;
+    green = LOW;
+    blue = LOW;
 
     //clapDetector.update();    
     //Serial.println(clapDetector.getSoundValue());
@@ -177,24 +179,24 @@ void loop() {
     
     switch (aircon.getState()) {
         case ON_STATE:
-            red = 0;
-            green = 50;
+            red = LOW;
+            green = HIGH;
             break;
         case OFF_STATE:
-            red = 50;
-            green = 0;
+            red = HIGH;
+            green = LOW;
             break;
         case AUTO_STATE:
-            red = 50;
-            green = 50;
+            red = HIGH;
+            green = HIGH;
             break;
         default:
             Serial.println("STATE UNKNOWN");
     }
 
+    // pinMode(D0, OUTPUT);
+    // analogWrite(D0, 255);
     RGBLed.write(red, green, blue, true);
-    pinMode(D4, OUTPUT);
-    digitalWrite(D4, HIGH);
     delay(100);
     // Serial.print("DETECT-DELAY");
     // Serial.println(aircon.detectDelay());

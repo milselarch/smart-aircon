@@ -37,9 +37,9 @@ class rgbLed {
             this->blue = b;
         }
 
-        analogWrite(this->redPin, r);
-        analogWrite(this->greenPin, g);
-        analogWrite(this->bluePin, b);
+        digitalWrite(this->redPin, r);
+        digitalWrite(this->greenPin, g);
+        digitalWrite(this->bluePin, b);
     }
 
     unsigned int getRed() { return this->red; }
